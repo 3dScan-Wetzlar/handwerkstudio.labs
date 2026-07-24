@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://3dscan-wetzlar.github.io/handwerkstudio.labs/sitemap.xml
