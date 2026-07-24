@@ -15,60 +15,173 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22hsl%28304%2C62%25%2C38%25%29%22/%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2213%22%20r%3D%225.5%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%228%22%20y%3D%2221%22%20width%3D%2216%22%20height%3D%223.5%22%20rx%3D%221.75%22%20fill%3D%22%23fff%22%20opacity%3D%22.85%22/%3E%3C/svg%3E">
 <style>
 :root{
- --accent:hsl(304,62%,38%); --accent-ink:hsl(304,62%,29%);
- --accent-soft:hsl(304,48%,96%); --accent-line:hsl(304,40%,86%);
- --bg:#f6f8fb; --surface:#ffffff; --text:#18222e; --muted:#5c6b7a; --border:#e3e8ef;
- --radius:12px;
+ --accent:hsl(344,48%,36%); --accent-ink:hsl(344,48%,29%);
+ --accent-soft:hsl(344,46%,96%); --accent-line:hsl(344,38%,86%);
+ --bg:#f7f9fc; --surface:#ffffff; --surface-2:#eff3f9;
+ --ink:#0e1726; --muted:#57687e; --faint:#8493a7;
+ --border:#e3e9f2; --border-strong:#cfd9e7;
+ --ok:#0f7d6f; --ok-soft:#e4f3f0;
+ --shadow:0 1px 2px rgba(14,23,38.05), 0 10px 26px -14px rgba(14,23,38.16);
+ --radius:14px;
  --sp-2:8px; --sp-3:16px; --sp-4:24px; --sp-5:40px; --sp-6:64px;
- --fs-0:.85rem; --fs-1:1rem; --fs-2:1.14rem; --fs-3:1.4rem; --fs-4:2.05rem;
+ --fs-0:.85rem; --fs-1:1rem; --fs-2:1.16rem; --fs-3:1.45rem; --fs-4:2.35rem;
+ --mono:ui-monospace,"SF Mono","Cascadia Code",Consolas,"Liberation Mono",monospace;
+}
+@media (prefers-color-scheme:dark){
+ :root{
+ --accent:hsl(344,40%,68%); --accent-ink:hsl(344,44%,76%);
+ --accent-soft:hsl(344,30%,15%); --accent-line:hsl(344,24%,26%);
+ --bg:#0b1220; --surface:#121c2e; --surface-2:#0f1828;
+ --ink:#e8eef8; --muted:#94a3b9; --faint:#6c7d96;
+ --border:#1f2d45; --border-strong:#2b3c58;
+ --ok:#3ccfbb; --ok-soft:#0f2b29;
+ --shadow:0 1px 2px rgba(0,0,0.4), 0 12px 30px -16px rgba(0,0,0.65);
+ }
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;margin:0;
- background:var(--bg);color:var(--text);line-height:1.6;-webkit-text-size-adjust:100%}
-.wrap{max-width:720px;margin:0 auto;padding:var(--sp-5) 20px}
-h1{font-size:var(--fs-4);line-height:1.15;letter-spacing:-.02em;margin:.2em 0 .35em}
-h2{font-size:var(--fs-3);line-height:1.3;margin:1.5em 0 .5em}
+ background:var(--bg);color:var(--ink);line-height:1.62;font-size:17px;
+ -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:740px;margin:0 auto;padding:var(--sp-5) 20px}
+h1{font-size:var(--fs-4);line-height:1.12;letter-spacing:-.026em;font-weight:760;
+ margin:.15em 0 .35em;text-wrap:balance}
+h2{font-size:var(--fs-3);line-height:1.25;letter-spacing:-.018em;font-weight:720;
+ margin:1.7em 0 .6em;text-wrap:balance}
 p{margin:.7em 0}
-a{color:var(--accent-ink)}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 li{margin:10px 0;line-height:1.55}
+
+/* Kopfzeile / Marke */
+.topbar{border-bottom:1px solid var(--border);background:var(--surface)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;
+ padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.01em;
+ font-size:15.5px;color:var(--ink)}
+.brand .mark{width:26px;height:26px;border-radius:7px;background:var(--accent);
+ display:inline-grid;place-items:center;color:#fff;font-family:var(--mono);
+ font-size:12px;font-weight:700;letter-spacing:0}
+.status{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:13.5px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);
+ box-shadow:0 0 0 3px var(--ok-soft);flex:0 0 auto}
+
+/* Hero */
 .hero{background:linear-gradient(180deg,var(--accent-soft),var(--bg));
  border-bottom:1px solid var(--border)}
 .hero .wrap{padding-top:var(--sp-6);padding-bottom:var(--sp-5)}
-.sub{color:var(--muted);font-size:var(--fs-2);max-width:58ch}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--accent-ink);font-weight:600;margin:0 0 14px}
+.sub.lede{color:var(--muted);font-size:var(--fs-2);max-width:56ch;line-height:1.5}
 .badge{display:inline-block;background:var(--surface);color:var(--accent-ink);
  border:1px solid var(--accent-line);border-radius:999px;padding:3px 12px;
  font-size:var(--fs-0);font-weight:600;letter-spacing:.02em}
-.btn{display:inline-block;background:var(--accent);color:#fff;border:0;
- border-radius:8px;padding:13px 26px;font-size:var(--fs-1);font-weight:600;
- cursor:pointer;text-decoration:none;margin-top:var(--sp-3)}
-.btn:hover{background:var(--accent-ink)}
+.hero-fine{color:var(--faint);font-size:var(--fs-0);margin-top:var(--sp-2)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+ background:var(--accent);color:#fff;border:0;border-radius:10px;padding:13px 26px;
+ font:inherit;font-size:16px;font-weight:640;cursor:pointer;text-decoration:none;
+ margin-top:var(--sp-3)}
+.btn:hover{background:var(--accent-ink);text-decoration:none;color:#fff}
 .btn-ghost{display:inline-block;background:transparent;color:var(--accent-ink);
- border:1px solid var(--accent-line);border-radius:8px;padding:12px 22px;
+ border:1px solid var(--accent-line);border-radius:10px;padding:12px 22px;
  font-size:var(--fs-1);cursor:pointer;text-decoration:none}
-.hero-fine{color:var(--muted);font-size:var(--fs-0);margin-top:var(--sp-2)}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
- padding:var(--sp-4);margin-top:var(--sp-4);box-shadow:0 1px 2px rgba(16,24,40,.04)}
+
+/* Flaechen */
+.card.form-card{background:var(--surface);border:1px solid var(--border);
+ border-radius:var(--radius);padding:var(--sp-4);margin-top:var(--sp-4);box-shadow:var(--shadow)}
 .center{text-align:center}
-label{display:block;margin:12px 0 4px;font-weight:600}
-input[type=email],input[type=text]{width:100%;padding:11px;border:1px solid var(--border);
- border-radius:8px;font-size:var(--fs-1);background:var(--surface)}
-input[type=email]:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px}
-.radio{font-weight:400;margin:6px 0}
-.radio label{display:inline;font-weight:400;margin:0}
-.price-anchor{font-size:var(--fs-4);font-weight:700;letter-spacing:-.02em;margin:.1em 0}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
+ color:var(--faint);margin:var(--sp-5) 0 0}
+
+/* Live-Demo-Panel (Anfrage/Antwort des echten Prototyps) */
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+ box-shadow:var(--shadow);overflow:hidden;margin-top:var(--sp-4)}
+.panel-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;
+ border-bottom:1px solid var(--border);background:var(--surface-2);
+ font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.panel-bar .verb{color:var(--accent-ink);font-weight:700}
+.panel-body{padding:16px 18px 18px;font-family:var(--mono);font-size:13.5px;line-height:1.68;
+ overflow-x:auto}
+.io-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+ font-family:var(--mono);margin:0 0 5px}
+.io-in{color:var(--muted);margin:0 0 12px;white-space:pre-wrap;word-break:break-word}
+.io-out{color:var(--ink);margin:0;white-space:pre-wrap;word-break:break-word}
+.io-out b{color:var(--ok);font-weight:640}
+.io-meta{color:var(--faint);font-size:12px;font-family:var(--mono);margin-top:10px}
+.demo-note{color:var(--faint);font-size:var(--fs-0);margin-top:10px}
+
+/* Endpunkte */
+.endpoints{display:flex;flex-direction:column;gap:12px;margin-top:var(--sp-3)}
+.ep{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.ep-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.method{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--ok);
+ border-radius:5px;padding:2px 7px;letter-spacing:.03em}
+.route{font-family:var(--mono);font-size:14.5px;color:var(--ink);font-weight:640}
+.ep p{margin:0 0 9px;color:var(--muted);font-size:15px}
+.ex{font-family:var(--mono);font-size:13px;background:var(--surface-2);
+ border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--muted);
+ overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+.ex b{color:var(--ok);font-weight:640}
+
+/* Preise */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:var(--sp-3)}
+.tier{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
+.tier.mid{border-color:var(--accent);box-shadow:var(--shadow)}
+.tier .tag{font-family:var(--mono);font-size:11px;text-transform:uppercase;
+ letter-spacing:.05em;color:var(--faint)}
+.tier.mid .tag{color:var(--accent-ink)}
+.tier .amt{font-size:1.7rem;font-weight:740;letter-spacing:-.02em;
+ font-variant-numeric:tabular-nums;margin-top:2px}
+.tier .amt small{font-size:.95rem;font-weight:400;color:var(--muted)}
+.tier .cap{color:var(--muted);font-size:14px;margin-top:2px}
+.price-anchor{font-size:var(--fs-4);font-weight:740;letter-spacing:-.02em;margin:.1em 0;
+ font-variant-numeric:tabular-nums}
 .price-anchor small{font-size:var(--fs-1);font-weight:400;color:var(--muted)}
+
+/* Vertrauen */
 .trust{list-style:none;padding:0;margin:var(--sp-4) 0 0;display:flex;flex-wrap:wrap;gap:10px}
-.trust li{background:var(--surface);border:1px solid var(--border);border-radius:8px;
- padding:8px 14px;font-size:var(--fs-0);color:var(--muted);margin:0}
-.faq dt{font-weight:600;margin-top:var(--sp-3)}
+.trust li{display:flex;align-items:center;gap:8px;background:var(--surface);
+ border:1px solid var(--border);border-radius:9px;padding:9px 13px;font-size:14px;
+ color:var(--muted);margin:0}
+.trust li::before{content:"";width:14px;height:14px;flex:0 0 auto;border-radius:50%;
+ background:var(--ok-soft);background-image:radial-gradient(var(--ok) 40%,transparent 44%)}
+
+/* Formular */
+label{display:block;margin:14px 0 5px;font-weight:620;font-size:14.5px}
+input[type=email],input[type=text]{width:100%;padding:12px 13px;border:1px solid var(--border-strong);
+ border-radius:10px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink)}
+input[type=email]:focus,input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px;
+ border-color:transparent}
+.radio{font-weight:400;margin:7px 0}
+.radio label{display:flex;align-items:center;gap:9px;margin:0;font-weight:400;
+ border:1px solid var(--border-strong);border-radius:9px;padding:10px 13px;cursor:pointer;
+ font-size:14.5px}
+.radio label:hover{border-color:var(--accent)}
+.radio input{accent-color:var(--accent);width:16px;height:16px;flex:0 0 auto}
+
+/* FAQ */
+.faq dt{font-weight:640;margin-top:var(--sp-3)}
 .faq dd{margin:4px 0 0;color:var(--muted)}
-.intro{color:#33424f;font-size:var(--fs-2)}
-.cta{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);
- border-radius:var(--radius);padding:var(--sp-3) var(--sp-4);margin-top:var(--sp-5)}
-.cta a{color:var(--accent-ink);font-weight:600}
+
+/* Content-Seiten */
+.intro{color:var(--ink);font-size:var(--fs-2);opacity:.92}
+.cta{background:var(--surface);border:1px solid var(--border);
+ border-left:4px solid var(--accent);border-radius:var(--radius);
+ padding:var(--sp-3) var(--sp-4);margin-top:var(--sp-5)}
+.cta a{color:var(--accent-ink);font-weight:640}
 a.home{color:var(--muted);font-size:.9em;text-decoration:none}
-.fine{color:var(--muted);font-size:var(--fs-0);margin-top:var(--sp-4);
+.fine{color:var(--faint);font-size:var(--fs-0);margin-top:var(--sp-4);
  border-top:1px solid var(--border);padding-top:12px}
+
+@media (max-width:560px){
+ :root{--fs-4:1.95rem}
+ .tiers{grid-template-columns:1fr}
+ .hero .wrap{padding-top:var(--sp-5)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div class="wrap">
 <p><a class="home" href="https://labs.handwerkstudio.de/">&larr; Übersicht</a></p>
 <h1>Deutsche Abkürzungen ausschreiben - Klartextregeln</h1>
@@ -76,14 +189,14 @@ a.home{color:var(--muted);font-size:.9em;text-decoration:none}
 <h2>Grundlegende Abkürzungen</h2>
 <p>Deutsch bietet eine Reihe von grundlegenden Abkürzungen, die häufig im geschriebenen Text erscheinen. Beispielsweise steht &#x27;z.B.&#x27; für &#x27;zum Beispiel&#x27;. In einem automatisierten Kontext ist es entscheidend, dass diese Abkürzung in ihren vollen Ausdruck übersetzt wird, um eine präzise und eindeutige Interpretation zu gewährleisten. Andere häufige Beispiele sind &#x27;d.h.&#x27; für &#x27;das heißt&#x27; oder &#x27;u.a.&#x27; für &#x27;und andere&#x27;. Im Rahmen der Textverarbeitung ist es notwendig, diese Abkürzungen in ihre vollständigen Formen umzuwandeln, um sicherzustellen, dass sie korrekt interpretiert werden können. Darüber hinaus hilft die Erweiterung dieser Abkürzungen bei der Lesbarkeit und Interpretation von Text für maschinelle Verarbeitungsprozesse.</p>
 <h2>Formale Dokumente</h2>
-<p>In formellen Dokumenten ist es üblich, bestimmte Abkürzungen zu verwenden. Zum Beispiel steht &#x27;i.d.R.&#x27; für &#x27;im Durchschnitt Regel&#x27;. Diese Art von Abkürzung sollte immer in ihre vollen Ausdrücke umgewandelt werden, insbesondere wenn sie Teil eines automatisierten Textverarbeitungskonzepts sind. Ein weiteres Beispiel ist &#x27;ggf.&#x27;, das auf &#x27;gegebenenfalls&#x27; hindeutet. Dies kann bei der Analyse und Interpretation formeller Texte entscheidend sein. Die Erweiterung dieser Abkürzungen hilft dabei, sicherzustellen, dass die Intention des Autors korrekt verstanden wird.</p>
+<p>In formellen Dokumenten ist es üblich, bestimmte Abkürzungen zu verwenden. Zum Beispiel steht &#x27;i.d.R.&#x27; für &#x27;im Durchschnitt Regel&#x27;. Diese Art von Abkürzung sollte immer in ihre vollen Ausdrücke umgewandelt werden, insbesondere wenn sie Teil eines automatisierten Textverarbeitungskonzepts sind. Ein weiteres Beispiel ist &#x27;ggf.&#x27; das auf &#x27;gegebenenfalls&#x27; hindeutet. Dies kann bei der Analyse und Interpretation formeller Texte entscheidend sein. Die Erweiterung dieser Abkürzungen hilft dabei, sicherzustellen, dass die Intention des Autors korrekt verstanden wird.</p>
 <h2>Einführung in neue Abkürzungen</h2>
 <p>Es gibt immer neue oder unkonventionelle Abkürzungen, insbesondere in informellen Kontexten oder neuen digitalen Kommunikationsarten. Ein Beispiel dafür ist &#x27;evtl.&#x27; für &#x27;eventuell&#x27;. Es ist entscheidend, diese Abkürzungen korrekt zu übersetzen, um eine eindeutige und unmissverständliche Interpretation sicherzustellen. In der Entwicklung von Sprachverarbeitungs-Systemen muss man mit dem Wachstum der Anzahl solcher Abkürzungen rechnen und entsprechende Mechanismen zur Erweiterung in die Systementwicklung integrieren.</p>
 <h2>Technische Aspekte</h2>
 <p>Um deutsche Abkürzungen korrekt zu übersetzen, sind bestimmte technische Vorgehensweisen erforderlich. Eine einfache Methode besteht darin, eine Liste von bekannten Abkürzungen und ihren vollständigen Ausdrücken zu erstellen. Diese können dann in einer Textverarbeitung genutzt werden, um automatisch die Erweiterung dieser Abkürzungen vornehmen zu können. Ein weiterer Ansatz ist das Training maschineller Modelle mit einer großen Menge an korrigierten Daten, um ein tiefes Verständnis für die Anwendung und den Kontext der verschiedenen Abkürzungen zu gewinnen.</p>
 <h2>Zusammenfassend</h2>
 <p>Die Übersetzung von deutschen Abkürzungen in ihre vollständigen Ausdrücke ist entscheidend, um eine korrekte Interpretation von Texten durch maschinelle Systeme sicherzustellen. Dies gilt sowohl für formale als auch informelle Kommunikationsarten und kann durch die Entwicklung spezieller Techniken und Tools unterstützt werden. Einige grundlegende Abkürzungen wie &#x27;z.B.&#x27; oder &#x27;d.h.&#x27; sind bereits weit verbreitet, aber es ist wichtig, neue und unkonventionelle Abkürzungen ständig zu aktualisieren und korrekt zu übersetzen.</p>
-<div class="cta"><strong>Deutschen Text normalisieren — ein API-Call, kein Setup.</strong> — in Entwicklung.
+<div class="cta"><strong>Deutschen Text normalisieren, ein API-Call, kein Setup.</strong>, in Entwicklung.
 <a href="https://incomparable-tartufo-76be9d.netlify.app/" rel="nofollow">Zur Warteliste</a> (Eintrag = Interesse, kein Kauf).</div>
 
 <p class="fine">Zuletzt aktualisiert: 2026-07-24. Automatisch erstellte, redaktionell ungeprüfte
