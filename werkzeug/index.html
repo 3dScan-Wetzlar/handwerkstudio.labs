@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<title>DE-Text-Notizen</title>
-<meta property="og:title" content="DE-Text-Notizen">
-<meta property="og:description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
+<title>Deutsche Abkürzungen ausschreiben, Lesbarkeit messen, Text normalisieren</title>
+<meta name="description" content="Kostenloses Werkzeug für deutschen Text: Abkürzungen ausschreiben, Flesch-Lesbarkeit berechnen, Leerraum bereinigen. Läuft im Browser, ohne Anmeldung.">
+<meta property="og:title" content="Deutsche Abkürzungen ausschreiben, Lesbarkeit messen, Text normalisieren">
+<meta property="og:description" content="Kostenloses Werkzeug für deutschen Text: Abkürzungen ausschreiben, Flesch-Lesbarkeit berechnen, Leerraum bereinigen. Läuft im Browser, ohne Anmeldung.">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://labs.handwerkstudio.de/">
-<meta property="og:url" content="https://labs.handwerkstudio.de/">
-<meta property="og:image" content="https://labs.handwerkstudio.de/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="624">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://labs.handwerkstudio.de/werkzeug/">
+<meta property="og:url" content="https://labs.handwerkstudio.de/werkzeug/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22hsl%28344%2C48%25%2C36%25%29%22/%3E%3Crect%20x%3D%228%22%20y%3D%229%22%20width%3D%2216%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%228%22%20y%3D%2214.5%22%20width%3D%2211%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.85%22/%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%2214%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.7%22/%3E%3C/svg%3E">
 <style>
 :root{
@@ -182,13 +179,153 @@ a.home{color:var(--muted);font-size:.9em;text-decoration:none}
  .hero .wrap{padding-top:var(--sp-5)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style></head><body><div class="wrap">
-<h1>DE-Text-Notizen</h1>
-<p class="intro">Kurze, nützliche Notizen aus der Praxis deutscher Textverarbeitung.</p>
-<div class="cta"><strong>Kostenloses Werkzeug:</strong> deutsche Abkürzungen ausschreiben, Lesbarkeit messen, Text normalisieren. Läuft direkt im Browser, ohne Anmeldung. <a href="https://labs.handwerkstudio.de/werkzeug/">Werkzeug öffnen</a></div>
-<ul>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/">Deutsche Abkürzungen ausschreiben - Klartextregeln</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie deutsche Abkürzungen in ihren vollen Ausdrücken übersetzen und wie dies für maschinelle Verarbeitung relevant ist.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/">Umlaute &amp; ß in der Textverarbeitung: korrekte Behandlung</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Umlaute und das Eszett (ß) in deutschen Texten korrekt behandelt werden, inklusive Transliteration und den richtigen Einsatz von Formaten.</span></li>
-</ul>
-<p class="fine">Automatisch gepflegte Seite eines Software-Experiments (FounderOS). Stand: 2026-07-24.</p>
-</div></body></html>
+.tool-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:var(--sp-4)}
+.tool-tab{border:1px solid var(--border-strong);background:var(--surface);color:var(--ink);
+ border-radius:9px;padding:9px 14px;font:inherit;font-size:14.5px;cursor:pointer}
+.tool-tab[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+textarea{width:100%;min-height:150px;padding:13px;border:1px solid var(--border-strong);
+ border-radius:10px;font:inherit;font-size:15.5px;background:var(--bg);color:var(--ink);
+ resize:vertical;line-height:1.55}
+textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.tool-out{white-space:pre-wrap;word-break:break-word;background:var(--surface-2);
+ border:1px solid var(--border);border-radius:10px;padding:13px;min-height:64px;
+ font-size:15.5px;line-height:1.6}
+.tool-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:var(--sp-3)}
+.tool-stat{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--sp-3);list-style:none;padding:0}
+.tool-stat li{background:var(--surface);border:1px solid var(--border);border-radius:9px;
+ padding:9px 13px;font-size:14px;color:var(--muted);margin:0;font-variant-numeric:tabular-nums}
+.tool-stat b{color:var(--ink)}
+.hint{color:var(--faint);font-size:var(--fs-0)}
+</style></head><body>
+<div class="topbar"><div class="wrap">
+<span class="brand"><span class="mark">de</span> DE-Text-Werkzeug</span>
+<span class="status"><span class="dot"></span> kostenlos, ohne Anmeldung</span>
+</div></div>
+<header class="hero"><div class="wrap">
+<p class="eyebrow">Werkzeug</p>
+<h1>Deutschen Text aufbereiten, direkt im Browser</h1>
+<p class="lede">Abkürzungen ausschreiben, Lesbarkeit messen, Leerraum bereinigen. Kostenlos, ohne Anmeldung, ohne Upload.</p>
+</div></header>
+<div class="wrap">
+<div class="tool-tabs" role="tablist">
+<button class="tool-tab" role="tab" aria-selected="true" data-m="expand">Abkürzungen ausschreiben</button>
+<button class="tool-tab" role="tab" aria-selected="false" data-m="read">Lesbarkeit messen</button>
+<button class="tool-tab" role="tab" aria-selected="false" data-m="norm">Text normalisieren</button>
+</div>
+<div class="card">
+<label for="in">Dein Text</label>
+<textarea id="in" spellcheck="false" placeholder="Text hier einfügen, z.B. aus einem Formular, Handbuch oder Vertrag."></textarea>
+<div class="tool-row">
+<button class="btn" id="run" style="margin-top:0">Ausführen</button>
+<button class="btn-ghost" id="demo" type="button">Beispiel einsetzen</button>
+<button class="btn-ghost" id="copy" type="button">Ergebnis kopieren</button>
+<span class="hint" id="mode-hint"></span>
+</div>
+<label for="out" style="margin-top:var(--sp-4)">Ergebnis</label>
+<div class="tool-out" id="out" aria-live="polite">Ergebnis erscheint hier.</div>
+<ul class="tool-stat" id="stats"></ul>
+<p class="hint" style="margin-top:14px">Läuft vollständig in deinem Browser. Der Text wird nicht
+hochgeladen, nicht gespeichert und nicht ausgewertet. Keine Tracker, keine Anmeldung.</p>
+</div>
+
+<div class="cta">
+<strong>Das Gleiche automatisch, für viele Texte?</strong> Genau diese drei Funktionen entstehen
+gerade als REST-API, damit sie in n8n, Make, Zapier oder eigenem Code laufen.
+<a href="https://incomparable-tartufo-76be9d.netlify.app/" rel="nofollow">Auf die Warteliste</a> (Eintrag ist Interesse, kein Kauf).
+</div>
+
+<h2>Was die drei Funktionen genau tun</h2>
+<dl class="faq">
+<dt>Abkürzungen ausschreiben</dt><dd>Ersetzt gängige deutsche Abkürzungen durch die Vollform,
+z.B. für Vorlese-Software, Barrierefreiheit oder saubere Weiterverarbeitung. Aktuell 30
+Einträge im Lexikon.</dd>
+<dt>Lesbarkeit messen</dt><dd>Berechnet den Flesch-Reading-Ease in der deutschen Anpassung
+(Amstad-Formel): 180 minus mittlere Satzlänge minus 58,5 mal mittlere Silbenzahl je Wort.
+Höhere Werte bedeuten leichter lesbar.</dd>
+<dt>Text normalisieren</dt><dd>Schreibt Abkürzungen aus und bereinigt Mehrfach-Leerzeichen
+sowie überflüssige Zeilenumbrüche.</dd>
+<dt>Kostet das etwas?</dt><dd>Nein. Diese Seite ist kostenlos und bleibt es. Bezahlt würde
+später nur der programmatische Zugriff über die API.</dd>
+</dl>
+<p class="fine">Automatisch gepflegte Seite eines unabhängigen Software-Experiments. Die Logik
+entspricht dem lauffähigen Prototyp; Angaben ohne Gewähr. <a class="home" href="https://labs.handwerkstudio.de/">Übersicht</a></p>
+</div>
+<script>
+(function(){
+  var ABBR = {"z.B.": "zum Beispiel", "z. B.": "zum Beispiel", "u.a.": "unter anderem", "u. a.": "unter anderem", "d.h.": "das heißt", "d. h.": "das heißt", "bzw.": "beziehungsweise", "usw.": "und so weiter", "etc.": "et cetera", "ggf.": "gegebenenfalls", "inkl.": "inklusive", "exkl.": "exklusive", "max.": "maximal", "min.": "minimal", "ca.": "circa", "vgl.": "vergleiche", "Nr.": "Nummer", "Abb.": "Abbildung", "Tab.": "Tabelle", "z.T.": "zum Teil", "u.U.": "unter Umständen", "i.d.R.": "in der Regel", "o.Ä.": "oder Ähnliches", "s.o.": "siehe oben", "s.u.": "siehe unten", "Str.": "Straße", "Tel.": "Telefon", "evtl.": "eventuell", "sog.": "sogenannt", "u.v.m.": "und vieles mehr"};
+  var KEYS = Object.keys(ABBR).sort(function(a,b){return b.length-a.length;});
+  function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+  function expand(t){
+    var n=0;
+    KEYS.forEach(function(k){
+      var re=new RegExp(esc(k),"g");
+      t=t.replace(re,function(){n++;return ABBR[k];});
+    });
+    return {text:t, n:n};
+  }
+  function syllables(w){var g=w.match(/[aeiouäöüy]+/gi);return Math.max(1,g?g.length:0);}
+  function readability(t){
+    var sents=t.split(/[.!?]+/).filter(function(s){return s.trim().length;});
+    var words=t.match(/[A-Za-zÄÖÜäöüß]+/g)||[];
+    var ns=Math.max(1,sents.length), nw=Math.max(1,words.length);
+    var syl=0; words.forEach(function(w){syl+=syllables(w);});
+    var asl=nw/ns, asw=syl/nw;
+    var fre=180-asl-58.5*asw;
+    fre=Math.round(Math.max(0,Math.min(100,fre))*10)/10;
+    var lvl = fre>=70?"leicht":(fre>=50?"mittel":(fre>=30?"schwer":"sehr schwer"));
+    return {fre:fre, level:lvl, words:nw, sents:ns, asl:Math.round(asl*100)/100,
+            asw:Math.round(asw*100)/100};
+  }
+  function normalize(t){
+    var r=expand(t).text;
+    r=r.replace(/[ \t]+/g," ").replace(/\s*\n\s*/g,"\n");
+    return r.trim();
+  }
+  var DEMOS={
+    expand:"Bitte Nr. 4 vgl. Abb. 2 beachten, d.h. Angaben i.d.R. max. 3 Tage.",
+    read:"Die Bearbeitung des Antrags erfolgt nach Eingang der vollständigen Unterlagen.",
+    norm:"z.B.   doppelte    Leerzeichen usw.\n\n  und Umbrüche  "
+  };
+  var HINTS={
+    expand:"Ersetzt Abkürzungen durch die Vollform.",
+    read:"Ergibt einen Wert von 0 bis 100. Höher ist leichter.",
+    norm:"Schreibt aus und bereinigt Leerraum."
+  };
+  var mode="expand";
+  var inEl=document.getElementById("in"), outEl=document.getElementById("out"),
+      statEl=document.getElementById("stats"), hintEl=document.getElementById("mode-hint");
+  function setHint(){hintEl.textContent=HINTS[mode];}
+  function run(){
+    var t=inEl.value||"";
+    if(!t.trim()){outEl.textContent="Bitte zuerst einen Text eingeben.";statEl.innerHTML="";return;}
+    if(mode==="expand"){
+      var r=expand(t); outEl.textContent=r.text;
+      statEl.innerHTML="<li><b>"+r.n+"</b> Ersetzungen</li><li><b>"+t.length+"</b> Zeichen</li>";
+    } else if(mode==="read"){
+      var s=readability(t);
+      outEl.textContent="Flesch (Deutsch): "+s.fre+"  ·  Einstufung: "+s.level;
+      statEl.innerHTML="<li><b>"+s.words+"</b> Wörter</li><li><b>"+s.sents+"</b> Sätze</li>"+
+        "<li>Ø Satzlänge <b>"+s.asl+"</b></li><li>Ø Silben/Wort <b>"+s.asw+"</b></li>";
+    } else {
+      var n=normalize(t); outEl.textContent=n;
+      statEl.innerHTML="<li>vorher <b>"+t.length+"</b> Zeichen</li><li>nachher <b>"+n.length+"</b></li>";
+    }
+  }
+  document.querySelectorAll(".tool-tab").forEach(function(b){
+    b.addEventListener("click",function(){
+      document.querySelectorAll(".tool-tab").forEach(function(x){x.setAttribute("aria-selected","false");});
+      b.setAttribute("aria-selected","true"); mode=b.dataset.m; setHint();
+      if(inEl.value.trim()){run();}
+    });
+  });
+  document.getElementById("run").addEventListener("click",run);
+  document.getElementById("demo").addEventListener("click",function(){inEl.value=DEMOS[mode];run();});
+  document.getElementById("copy").addEventListener("click",function(){
+    var t=outEl.textContent||"";
+    if(navigator.clipboard){navigator.clipboard.writeText(t);}
+  });
+  inEl.addEventListener("input",function(){if(inEl.value.trim()){run();}});
+  setHint();
+})();
+</script>
+</body></html>
