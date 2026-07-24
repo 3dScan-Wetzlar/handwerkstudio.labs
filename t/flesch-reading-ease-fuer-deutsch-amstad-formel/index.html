@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<title>DE-Text-Notizen</title>
-<meta property="og:title" content="DE-Text-Notizen">
-<meta property="og:description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<meta property="og:type" content="website">
+<meta name="description" content="Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.">
+<title>Flesch-Reading-Ease für Deutsch: Die Amstad-Formel</title>
+<meta property="og:title" content="Flesch-Reading-Ease für Deutsch: Die Amstad-Formel">
+<meta property="og:description" content="Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://labs.handwerkstudio.de/">
-<meta property="og:url" content="https://labs.handwerkstudio.de/">
+<link rel="canonical" href="https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/">
+<meta property="og:url" content="https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/">
 <meta property="og:image" content="https://labs.handwerkstudio.de/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="624">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22hsl%28344%2C48%25%2C36%25%29%22/%3E%3Crect%20x%3D%228%22%20y%3D%229%22%20width%3D%2216%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%228%22%20y%3D%2214.5%22%20width%3D%2211%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.85%22/%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%2214%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.7%22/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Flesch-Reading-Ease für Deutsch: Die Amstad-Formel", "description": "Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.", "inLanguage": "de", "isAccessibleForFree": true, "datePublished": "2026-07-25", "url": "https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/"}</script>
 <style>
 :root{
  --accent:hsl(344,48%,36%); --accent-ink:hsl(344,48%,29%);
@@ -183,13 +184,24 @@ a.home{color:var(--muted);font-size:.9em;text-decoration:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div class="wrap">
-<h1>DE-Text-Notizen</h1>
-<p class="intro">Kurze, nützliche Notizen aus der Praxis deutscher Textverarbeitung.</p>
-<div class="cta"><strong>Kostenlose Werkzeuge, direkt im Browser:</strong> <a href="https://labs.handwerkstudio.de/werkzeug/abkuerzungen-ausschreiben/">Abkürzungen ausschreiben</a> · <a href="https://labs.handwerkstudio.de/werkzeug/lesbarkeit-pruefen/">Lesbarkeit prüfen</a> · <a href="https://labs.handwerkstudio.de/werkzeug/text-normalisieren/">Text normalisieren</a>. Ohne Anmeldung, ohne Upload.<div class="sub" style="margin-top:8px">Nachschlagen: <a href="https://labs.handwerkstudio.de/abkuerzungsverzeichnis/">Verzeichnis deutscher Abkürzungen</a></div></div>
-<ul>
-<li><a href="https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/">Flesch-Reading-Ease für Deutsch: Die Amstad-Formel</a><br><span style="color:#5c6b7a">Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/">Deutsche Abkürzungen ausschreiben - Klartextregeln</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie deutsche Abkürzungen in ihren vollen Ausdrücken übersetzen und wie dies für maschinelle Verarbeitung relevant ist.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/">Umlaute &amp; ß in der Textverarbeitung: korrekte Behandlung</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Umlaute und das Eszett (ß) in deutschen Texten korrekt behandelt werden, inklusive Transliteration und den richtigen Einsatz von Formaten.</span></li>
-</ul>
-<p class="fine">Automatisch gepflegte Seite eines Software-Experiments (FounderOS). Stand: 2026-07-25.</p>
+<p><a class="home" href="https://labs.handwerkstudio.de/">&larr; Übersicht</a></p>
+<h1>Flesch-Reading-Ease für Deutsch: Die Amstad-Formel</h1>
+<p class="intro">Die Amstad-Formel ist eine deutsche Version der Flesch-Oberflächenlesebarkeitsformel, die speziell für den deutschen Sprachgebrauch optimiert wurde. Sie hilft dabei, Texte nach ihrer Lesbarkeit und Verständlichkeit zu bewerten.</p>
+<h2>Was ist die Amstad-Formel?</h2>
+<p>Die Amstad-Formel wurde entwickelt, um die Lesbarkeitsbewertung deutscher Texte präziser zu machen. Sie berücksichtigt spezifische Merkmale der deutschen Sprache wie lange Satzstrukturen und Komplexität des Vokabulars. Im Gegensatz zur ursprünglichen Flesch-Formel, die englischsprachige Texte bewertet, passt die Amstad-Formel sich an die Besonderheiten der deutschen Sprache an.</p>
+<h2>Wie funktioniert die Bewertung?</h2>
+<p>Die Berechnung der Amstad-Formel basiert auf einem mathematischen Modell, das Satzlänge und Wortschwere berücksichtigt. Ein kurzer Text mit einfachen Wortstrukturen erhält eine höhere Punktzahl als ein langer Text mit komplexer Vokabularik. Die Formel selbst wird durch die Berechnung eines Faktors der Anzahl von Silben in den Wörtern und des Durchschnittes der Satzlängen bestimmt.</p>
+<h2>Praktische Anwendung</h2>
+<p>Die Amstad-Formel findet vor allem Anwendung bei der Erstellung von Leseleichtmachungsprogrammen oder beim Verfassen von Schulbüchern, Werbesprüchen und technischen Dokumentationen. Ein Beispiel ist die Überarbeitung eines schwierigen technischen Artikels, um ihn für ein breiteres Publikum lesbar zu machen. Hierfür wird der Text analysiert, und durch Anpassungen an die Amstad-Formel verbessert.</p>
+<h2>Vorteile im Vergleich zur ursprünglichen Flesch-Formel</h2>
+<p>Die Überarbeitung der Flesch-Oberflächenlesebarkeitsformel für den deutschen Sprachgebrauch bietet Vorteile, da sie die Besonderheiten der deutschen Sprache berücksichtigt. Es gibt beispielsweise ein längeres Mittelwortlängenverhältnis und eine höhere Anzahl von Silben pro Wort im Deutschen als im Englischen. Dadurch wird die Lesbarkeit in der Regel besser eingeschätzt, wenn die Amstad-Formel angewendet wird.</p>
+<h2>Limitierungen der Methode</h2>
+<p>Auch wenn die Amstad-Formel ein nützliches Werkzeug ist, hat sie bestimmte Limitierungen. Zum Beispiel kann es schwierig sein, einen Text in eine einfachere Version umzuwandeln, ohne seine ursprüngliche Bedeutung zu verändern. Darüber hinaus sind die Ergebnisse der Bewertung abhängig von der Wahl der Wörter und Satzstrukturen im Originaltext.</p>
+<div class="cta"><strong>Passendes kostenloses Werkzeug:</strong>
+<a href="https://labs.handwerkstudio.de/werkzeug/lesbarkeit-pruefen/">Lesbarkeit prüfen</a>, direkt im Browser, ohne Anmeldung und ohne Upload.
+<div class="sub" style="margin-top:8px">Deutschen Text normalisieren — ein API-Call, kein Setup. entsteht gerade als API für n8n, Make und eigenen Code.
+<a href="https://incomparable-tartufo-76be9d.netlify.app/" rel="nofollow">Auf die Warteliste</a> (Eintrag ist Interesse, kein Kauf).</div></div>
+
+<p class="fine">Zuletzt aktualisiert: 2026-07-25. Automatisch erstellte, redaktionell ungeprüfte
+Info-Seite eines Software-Experiments; Angaben ohne Gewähr.</p>
 </div></body></html>
