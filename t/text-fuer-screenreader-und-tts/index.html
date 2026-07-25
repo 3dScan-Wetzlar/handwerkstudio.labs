@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<title>DE-Text-Notizen</title>
-<meta property="og:title" content="DE-Text-Notizen">
-<meta property="og:description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<meta property="og:type" content="website">
+<meta name="description" content="Erfahren Sie, wie Sie Text aufbereiten können, um ihn effizient für Screenreader und Text-to-Speech (TTS) Systeme lesbar zu machen, einschließlich Zahlen, Datumsangaben, Symbole und Abkürzungen.">
+<title>Text für Screenreader und TTS vorbereiten</title>
+<meta property="og:title" content="Text für Screenreader und TTS vorbereiten">
+<meta property="og:description" content="Erfahren Sie, wie Sie Text aufbereiten können, um ihn effizient für Screenreader und Text-to-Speech (TTS) Systeme lesbar zu machen, einschließlich Zahlen, Datumsangaben, Symbole und Abkürzungen.">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://labs.handwerkstudio.de/">
-<meta property="og:url" content="https://labs.handwerkstudio.de/">
+<link rel="canonical" href="https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/">
+<meta property="og:url" content="https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/">
 <meta property="og:image" content="https://labs.handwerkstudio.de/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="624">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22hsl%28344%2C48%25%2C36%25%29%22/%3E%3Crect%20x%3D%228%22%20y%3D%229%22%20width%3D%2216%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%228%22%20y%3D%2214.5%22%20width%3D%2211%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.85%22/%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%2214%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.7%22/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text für Screenreader und TTS vorbereiten", "description": "Erfahren Sie, wie Sie Text aufbereiten können, um ihn effizient für Screenreader und Text-to-Speech (TTS) Systeme lesbar zu machen, einschließlich Zahlen, Datumsangaben, Symbole und Abkürzungen.", "inLanguage": "de", "isAccessibleForFree": true, "datePublished": "2026-07-25", "url": "https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/"}</script>
 <style>
 :root{
  --accent:hsl(344,48%,36%); --accent-ink:hsl(344,48%,29%);
@@ -183,14 +184,24 @@ a.home{color:var(--muted);font-size:.9em;text-decoration:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div class="wrap">
-<h1>DE-Text-Notizen</h1>
-<p class="intro">Kurze, nützliche Notizen aus der Praxis deutscher Textverarbeitung.</p>
-<div class="cta"><strong>Kostenlose Werkzeuge, direkt im Browser:</strong> <a href="https://labs.handwerkstudio.de/werkzeug/abkuerzungen-ausschreiben/">Abkürzungen ausschreiben</a> · <a href="https://labs.handwerkstudio.de/werkzeug/lesbarkeit-pruefen/">Lesbarkeit prüfen</a> · <a href="https://labs.handwerkstudio.de/werkzeug/text-normalisieren/">Text normalisieren</a>. Ohne Anmeldung, ohne Upload.<div class="sub" style="margin-top:8px">Nachschlagen: <a href="https://labs.handwerkstudio.de/abkuerzungsverzeichnis/">Verzeichnis deutscher Abkürzungen</a></div></div>
-<ul>
-<li><a href="https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/">Text für Screenreader und TTS vorbereiten</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie Text aufbereiten können, um ihn effizient für Screenreader und Text-to-Speech (TTS) Systeme lesbar zu machen, einschließlich Zahlen, Datumsangaben, Symbole und Abkürzungen.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/">Flesch-Reading-Ease für Deutsch: Die Amstad-Formel</a><br><span style="color:#5c6b7a">Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/">Deutsche Abkürzungen ausschreiben - Klartextregeln</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie deutsche Abkürzungen in ihren vollen Ausdrücken übersetzen und wie dies für maschinelle Verarbeitung relevant ist.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/">Umlaute &amp; ß in der Textverarbeitung: korrekte Behandlung</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Umlaute und das Eszett (ß) in deutschen Texten korrekt behandelt werden, inklusive Transliteration und den richtigen Einsatz von Formaten.</span></li>
-</ul>
-<p class="fine">Automatisch gepflegte Seite eines Software-Experiments (FounderOS). Stand: 2026-07-25.</p>
+<p><a class="home" href="https://labs.handwerkstudio.de/">&larr; Übersicht</a></p>
+<h1>Text für Screenreader und TTS vorbereiten</h1>
+<p class="intro">Textverarbeitung für Screenreader und Vorlese-Software ist eine wesentliche Komponente der Barrierefreiheit im digitalen Raum. Ein gut vorbereiteter Text erleichtert dem Nutzer die Nutzung von Dokumenten und Webseiten, indem er die Lesbarkeit für assistive Technologien optimiert.</p>
+<h2>Zahlen</h2>
+<p>Für Screenreader und TTS-Systeme ist es wichtig, Zahlen so darzustellen, dass sie leicht ausgesprochen werden können. Eine beliebte Methode ist die Darstellung von vierstelliger Nummer als Wortpaar (beispielsweise 2018 als &#x27;zweitausend acht&#x27;). Achten Sie außerdem darauf, Zahlen in Textform zu verwenden, wenn sie wichtige Informationen wie Datumsangaben oder Kosten repräsentieren. Beispielsweise wird &#x27;23. April&#x27; von einem Screenreader besser ausgegeben als das ISO-Format &#x27;2023-04&#x27;.</p>
+<h2>Datumsangaben</h2>
+<p>Datumsformate sollten universell verständlich sein, um eindeutige und konsistente Darstellungen zu gewährleisten. Ein gutes Format ist das ISO 8601 (YYYY-MM-DD), welches sowohl für Menschen als auch für Maschinen leicht interpretierbar ist. Beim Lesen wird &#x27;2023-04-17&#x27; als &#x27;der siebzehnte April zweitausenddreiundzwanzig&#x27; ausgesprochen, was in der Regel klarer und unmissverständlich ist.</p>
+<h2>Symbole</h2>
+<p>Symbole müssen entweder durch ihre entsprechenden Wörter oder ihre Beschreibungen ersetzt werden. Ein Beispiel dafür sind Sonderzeichen wie das Dollar-Zeichen ($), welches zu &#x27;Dollar&#x27; umgewandelt wird, um die Lesbarkeit für Screenreader und TTS-Systeme zu verbessern. Andere Symbole, wie z.B. Schrägstriche oder Gedankenblitze, sollten ebenfalls durch Text ersetzt werden, der ihren Zweck erklärt.</p>
+<h2>Abkürzungen</h2>
+<p>Abkürzungen sollten immer ausgeschrieben sein oder mit einer Erklärung versehen werden, um die Interpretation für Screenreader und TTS-Systeme zu erleichtern. Ein Beispiel ist &#x27;i.o.w.&#x27;, das man als &#x27;in other words&#x27; oder &#x27;also bedeutet&#x27; erklären kann. Dies erhöht die Lesbarkeit des Textes, insbesondere wenn der Text ohne Kontext verwendet wird.</p>
+<h2>Zusammenfassung</h2>
+<p>Eine effiziente Vorbereitung von Texten für Screenreader und TTS-Systeme erfordert das Berücksichtigen kleiner Details wie Zahlen, Datumsangaben, Symbole und Abkürzungen. Indem Sie diese Punkte berücksichtigen, können Sie sicherstellen, dass Ihr Inhalt allgemein zugänglicher wird, unabhängig davon, ob der Benutzer ihn liest oder hört.</p>
+<div class="cta"><strong>Passendes kostenloses Werkzeug:</strong>
+<a href="https://labs.handwerkstudio.de/werkzeug/lesbarkeit-pruefen/">Lesbarkeit prüfen</a>, direkt im Browser, ohne Anmeldung und ohne Upload.
+<div class="sub" style="margin-top:8px">Deutschen Text normalisieren — ein API-Call, kein Setup. entsteht gerade als API für n8n, Make und eigenen Code.
+<a href="https://incomparable-tartufo-76be9d.netlify.app/" rel="nofollow">Auf die Warteliste</a> (Eintrag ist Interesse, kein Kauf).</div></div>
+
+<p class="fine">Zuletzt aktualisiert: 2026-07-25. Automatisch erstellte, redaktionell ungeprüfte
+Info-Seite eines Software-Experiments; Angaben ohne Gewähr.</p>
 </div></body></html>

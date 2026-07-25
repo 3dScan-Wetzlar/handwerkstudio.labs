@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Flesch-Reading-Ease für Deutsch: Die Amstad-Formel](https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/)
 - [Deutsche Abkürzungen ausschreiben - Klartextregeln](https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/)
 - [Umlaute & ß in der Textverarbeitung: korrekte Behandlung](https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/)
 
