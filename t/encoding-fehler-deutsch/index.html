@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<title>DE-Text-Notizen</title>
-<meta property="og:title" content="DE-Text-Notizen">
-<meta property="og:description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<meta property="og:type" content="website">
+<meta name="description" content="Erfahren Sie, wie Mojibake (Ã¤) entsteht und repariert wird. Praktische Anleitungen für Encoding-Probleme in deutschen Texten.">
+<title>Encoding-Fehler im Deutschen: UTF-8 vs Latin-1</title>
+<meta property="og:title" content="Encoding-Fehler im Deutschen: UTF-8 vs Latin-1">
+<meta property="og:description" content="Erfahren Sie, wie Mojibake (Ã¤) entsteht und repariert wird. Praktische Anleitungen für Encoding-Probleme in deutschen Texten.">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://labs.handwerkstudio.de/">
-<meta property="og:url" content="https://labs.handwerkstudio.de/">
+<link rel="canonical" href="https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/">
+<meta property="og:url" content="https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/">
 <meta property="og:image" content="https://labs.handwerkstudio.de/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="624">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22hsl%28344%2C48%25%2C36%25%29%22/%3E%3Crect%20x%3D%228%22%20y%3D%229%22%20width%3D%2216%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%228%22%20y%3D%2214.5%22%20width%3D%2211%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.85%22/%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%2214%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.7%22/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Encoding-Fehler im Deutschen: UTF-8 vs Latin-1", "description": "Erfahren Sie, wie Mojibake (Ã¤) entsteht und repariert wird. Praktische Anleitungen für Encoding-Probleme in deutschen Texten.", "inLanguage": "de", "isAccessibleForFree": true, "datePublished": "2026-07-26", "url": "https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/"}</script>
 <style>
 :root{
  --accent:hsl(344,48%,36%); --accent-ink:hsl(344,48%,29%);
@@ -183,16 +184,48 @@ a.home{color:var(--muted);font-size:.9em;text-decoration:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div class="wrap">
-<h1>DE-Text-Notizen</h1>
-<p class="intro">Kurze, nützliche Notizen aus der Praxis deutscher Textverarbeitung.</p>
-<div class="cta"><strong>Kostenlose Werkzeuge, direkt im Browser:</strong> <a href="https://labs.handwerkstudio.de/werkzeug/abkuerzungen-ausschreiben/">Abkürzungen ausschreiben</a> · <a href="https://labs.handwerkstudio.de/werkzeug/lesbarkeit-pruefen/">Lesbarkeit prüfen</a> · <a href="https://labs.handwerkstudio.de/werkzeug/text-normalisieren/">Text normalisieren</a>. Ohne Anmeldung, ohne Upload.<div class="sub" style="margin-top:8px">Nachschlagen: <a href="https://labs.handwerkstudio.de/abkuerzungsverzeichnis/">Verzeichnis deutscher Abkürzungen</a></div></div>
-<ul>
-<li><a href="https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/">Encoding-Fehler im Deutschen: UTF-8 vs Latin-1</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Mojibake (Ã¤) entsteht und repariert wird. Praktische Anleitungen für Encoding-Probleme in deutschen Texten.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-worter-sortieren-din-5007-varianten/">Deutsche Wörter sortieren nach DIN 5007 - Variante 1 vs. 2</a><br><span style="color:#5c6b7a">Erfahren Sie, wie deutsche Wörter gemäß DIN 5007 korrekt sortiert werden: Unterschiede zwischen den beiden Varianten und richtige Platzierung von Umlauten.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/">Text für Screenreader und TTS vorbereiten</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie Text aufbereiten können, um ihn effizient für Screenreader und Text-to-Speech (TTS) Systeme lesbar zu machen, einschließlich Zahlen, Datumsangaben, Symbole und Abkürzungen.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/">Flesch-Reading-Ease für Deutsch: Die Amstad-Formel</a><br><span style="color:#5c6b7a">Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/">Deutsche Abkürzungen ausschreiben - Klartextregeln</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie deutsche Abkürzungen in ihren vollen Ausdrücken übersetzen und wie dies für maschinelle Verarbeitung relevant ist.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/">Umlaute &amp; ß in der Textverarbeitung: korrekte Behandlung</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Umlaute und das Eszett (ß) in deutschen Texten korrekt behandelt werden, inklusive Transliteration und den richtigen Einsatz von Formaten.</span></li>
-</ul>
-<p class="fine">Automatisch gepflegte Seite eines Software-Experiments (FounderOS). Stand: 2026-07-26.</p>
+<p><a class="home" href="https://labs.handwerkstudio.de/">&larr; Übersicht</a></p>
+<h1>Encoding-Fehler im Deutschen: UTF-8 vs Latin-1</h1>
+<p class="intro">Bei der Arbeit mit deutschen Texten stoßen viele auf das Problem von Encoding-Fehlern, oft unter dem Namen Mojibake bekannt. Diese Fehlkodierungen sind häufig die Folge eines inkorrekt gewählten Encodings zwischen UTF-8 und Latin-1.</p>
+<h2>Was ist Encoding?</h2>
+<p>Encoding ist der Prozess, durch den Text in eine Reihe von Bytes konvertiert wird. Die bekanntesten Formate im deutschen Sprachraum sind UTF-8 und ISO-8859-1 (auch Latin-1 genannt). UTF-8 kann alle Zeichen des Unicode-Satzes repräsentieren und ist universell auf Windows, macOS und Linux einsetzbar. Im Gegensatz dazu unterstützt Latin-1 nur eine begrenzte Anzahl von Zeichen, hauptsächlich westliche Sprachen.</p>
+<p>Ein Beispiel für UTF-8 Encoding: Die Zeichenkette &quot;Grüße&quot; wird in Bytes als [0x47 0xc3 0xbc 0x73 0xe4 0x65] dargestellt. Im Latin-1 Format entspricht die gleiche Zeichenfolge einem Fehler, da das ü-Zeichen nicht im ASCII-Subset enthalten ist.</p>
+<h2>Mojibake, wie es auftritt</h2>
+<p>Mojibake tritt auf, wenn ein Text in einer Encodierung gespeichert oder übertragen wird und dann mit dem falschen Codec gelesen wird. Dies führt zu fehlerhaften Zeichen, oft als Fragezeichen (?), Quadratzüge (â) oder andere Unschönheiten.</p>
+<p>Ein Beispiel: Die Datei &quot;Grüße.txt&quot; wurde im UTF-8 formatiert, aber als Latin-1 geöffnet wird. Der Text erscheint dann so: &quot;Gr?Â¼se&quot;, was die Lesbarkeit und Integrität des Dokuments stark beeinträchtigt.</p>
+<p>Ein häufiges Anzeichen von Mojibake sind Zeichen wie Ã¤ oder similar, die sich aus fehlerhafter Codierung in UTF-8 ergibt, wenn das Original im Latin-1 formatiert war.</p>
+<h2>Diagnose und Erkennung</h2>
+<p>Um Encoding-Fehler zu diagnostizieren, sollten Sie den Text so analysieren, dass ungewöhnliche Zeichen oder Muster auffallen. Ein Beispiel für ein einfaches Skript in Python kann folgendermaßen aussehen:</p>
+<p>```python
+import chardet
+with open(&#x27;filename.txt&#x27;, &#x27;rb&#x27;) as f:
+    result = chardet.detect(f.read())
+print(result)
+```
+Dieses Skript liest den Text einer Datei als Binärdatei ein und ermittelt die wahrscheinlichste Encodierung, indem es auf verschiedene Muster prüft.</p>
+<p>Mithilfe des Python-Pakets `chardet` kann man schnell erkennen, welche Codierung tatsächlich verwendet wurde, indem man den Textanalysealgorithmus anwendet.</p>
+<h2>Korrektur und Reparatur</h2>
+<p>Die Korrektur von Encoding-Fehlern erfordert die Identifizierung des ursprünglichen Encodings sowie das Anwenden der richtigen Decodierung auf den fehlerhaften Text. Ein Beispiel in Python:</p>
+<p>```python
+import codecs
+with open(&#x27;filename.txt&#x27;, &#x27;r&#x27;, encoding=&#x27;utf-8&#x27;) as f:
+    text = f.read()
+corrected_text = text.encode(&#x27;latin1&#x27;).decode(&#x27;utf-8&#x27;)
+print(corrected_text)
+```
+In diesem Beispiel wird der Text zunächst als UTF-8 gelesen, dann in ein Binary-Zeichenarray konvertiert und anschließend wieder in den ursprünglichen Latin-1 Code umgewandelt.</p>
+<p>Es ist wichtig zu beachten, dass dieser Vorgang nur funktionieren kann, wenn man weiß, welches Encoding tatsächlich für das Original verwendet wurde. Fehlende Informationen oder falsche Annahmen können die Daten weiter beschädigen.</p>
+<h2>Praktische Tipps zur Verhinderung</h2>
+<p>Um Encoding-Probleme zu vermeiden, ist es ratsam:</p>
+<p>1. stets klar über die verwendete Codierung zu sein und sie korrekt festzulegen.
+2. alle Textdateien vor dem Speichern auf mögliche Fehlkodierungen hin zu prüfen.
+3. bei der Übertragung von Text zwischen Systemen die Encodierung explizit anzugeben, z.B. im HTTP-Header für Webanwendungen oder in XML- und JSON-Dateien durch entsprechende Meta-Tags.</p>
+<p>Durch diese Maßnahmen kann man sicherstellen, dass sich Text immer korrekt darstellt und keine unerwarteten Probleme auftreten.</p>
+<div class="cta"><strong>Passendes kostenloses Werkzeug:</strong>
+<a href="https://labs.handwerkstudio.de/werkzeug/">Werkzeuge öffnen</a>, direkt im Browser, ohne Anmeldung und ohne Upload.
+<div class="sub" style="margin-top:8px">Deutschen Text normalisieren — ein API-Call, kein Setup. entsteht gerade als API für n8n, Make und eigenen Code.
+<a href="https://incomparable-tartufo-76be9d.netlify.app/" rel="nofollow">Auf die Warteliste</a> (Eintrag ist Interesse, kein Kauf).</div></div>
+
+<p class="fine">Zuletzt aktualisiert: 2026-07-26. Automatisch erstellte, redaktionell ungeprüfte
+Info-Seite eines Software-Experiments; Angaben ohne Gewähr.</p>
 </div></body></html>
