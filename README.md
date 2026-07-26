@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Encoding-Fehler im Deutschen: UTF-8 vs Latin-1](https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/)
 - [Deutsche Wörter sortieren nach DIN 5007 - Variante 1 vs. 2](https://labs.handwerkstudio.de/t/deutsche-worter-sortieren-din-5007-varianten/)
 - [Text für Screenreader und TTS vorbereiten](https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/)
 - [Flesch-Reading-Ease für Deutsch: Die Amstad-Formel](https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/)
