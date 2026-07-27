@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Deutsche Komposita & Worttrennung: Optimieren lange Wörter](https://labs.handwerkstudio.de/t/deutsche-komposita-worttrennung-optimieren/)
 - [Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen](https://labs.handwerkstudio.de/t/text-bereinigen-nlp/)
 - [Deutsche Zahlen und Datumsformate normalisieren](https://labs.handwerkstudio.de/t/deutsche-zahlen-datum-normalisieren/)
 - [Encoding-Fehler im Deutschen: UTF-8 vs Latin-1](https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/)
