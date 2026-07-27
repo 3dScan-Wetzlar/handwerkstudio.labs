@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<title>DE-Text-Notizen</title>
-<meta property="og:title" content="DE-Text-Notizen">
-<meta property="og:description" content="Kurze, nützliche Notizen zu deutscher Textverarbeitung und NLP-Praxis.">
-<meta property="og:type" content="website">
+<meta name="description" content="Erfahren Sie, wie Sie deutsche Texte für NLP-Prozesse optimieren, indem Sie Whitespace, Zero-Width-Zeichen und typografische Anführungszeichen korrekt handhaben.">
+<title>Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen</title>
+<meta property="og:title" content="Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen">
+<meta property="og:description" content="Erfahren Sie, wie Sie deutsche Texte für NLP-Prozesse optimieren, indem Sie Whitespace, Zero-Width-Zeichen und typografische Anführungszeichen korrekt handhaben.">
+<meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://labs.handwerkstudio.de/">
-<meta property="og:url" content="https://labs.handwerkstudio.de/">
+<link rel="canonical" href="https://labs.handwerkstudio.de/t/text-bereinigen-nlp/">
+<meta property="og:url" content="https://labs.handwerkstudio.de/t/text-bereinigen-nlp/">
 <meta property="og:image" content="https://labs.handwerkstudio.de/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="624">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22hsl%28344%2C48%25%2C36%25%29%22/%3E%3Crect%20x%3D%228%22%20y%3D%229%22%20width%3D%2216%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%228%22%20y%3D%2214.5%22%20width%3D%2211%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.85%22/%3E%3Crect%20x%3D%228%22%20y%3D%2220%22%20width%3D%2214%22%20height%3D%223%22%20rx%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.7%22/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen", "description": "Erfahren Sie, wie Sie deutsche Texte für NLP-Prozesse optimieren, indem Sie Whitespace, Zero-Width-Zeichen und typografische Anführungszeichen korrekt handhaben.", "inLanguage": "de", "isAccessibleForFree": true, "datePublished": "2026-07-27", "url": "https://labs.handwerkstudio.de/t/text-bereinigen-nlp/"}</script>
 <style>
 :root{
  --accent:hsl(344,48%,36%); --accent-ink:hsl(344,48%,29%);
@@ -183,18 +184,29 @@ a.home{color:var(--muted);font-size:.9em;text-decoration:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div class="wrap">
-<h1>DE-Text-Notizen</h1>
-<p class="intro">Kurze, nützliche Notizen aus der Praxis deutscher Textverarbeitung.</p>
-<div class="cta"><strong>Kostenlose Werkzeuge, direkt im Browser:</strong> <a href="https://labs.handwerkstudio.de/werkzeug/abkuerzungen-ausschreiben/">Abkürzungen ausschreiben</a> · <a href="https://labs.handwerkstudio.de/werkzeug/lesbarkeit-pruefen/">Lesbarkeit prüfen</a> · <a href="https://labs.handwerkstudio.de/werkzeug/text-normalisieren/">Text normalisieren</a>. Ohne Anmeldung, ohne Upload.<div class="sub" style="margin-top:8px">Nachschlagen: <a href="https://labs.handwerkstudio.de/abkuerzungsverzeichnis/">Verzeichnis deutscher Abkürzungen</a></div></div>
-<ul>
-<li><a href="https://labs.handwerkstudio.de/t/text-bereinigen-nlp/">Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie deutsche Texte für NLP-Prozesse optimieren, indem Sie Whitespace, Zero-Width-Zeichen und typografische Anführungszeichen korrekt handhaben.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-zahlen-datum-normalisieren/">Deutsche Zahlen und Datumsformate normalisieren</a><br><span style="color:#5c6b7a">Erfahren Sie wie man deutsche Zahlen (1.000,50) und Datumsformate (TT.MM.JJJJ) sowie Uhrzeiten korrekt formatiert. Beispiele mit praktischen Anwendungen.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/">Encoding-Fehler im Deutschen: UTF-8 vs Latin-1</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Mojibake (Ã¤) entsteht und repariert wird. Praktische Anleitungen für Encoding-Probleme in deutschen Texten.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-worter-sortieren-din-5007-varianten/">Deutsche Wörter sortieren nach DIN 5007 - Variante 1 vs. 2</a><br><span style="color:#5c6b7a">Erfahren Sie, wie deutsche Wörter gemäß DIN 5007 korrekt sortiert werden: Unterschiede zwischen den beiden Varianten und richtige Platzierung von Umlauten.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/">Text für Screenreader und TTS vorbereiten</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie Text aufbereiten können, um ihn effizient für Screenreader und Text-to-Speech (TTS) Systeme lesbar zu machen, einschließlich Zahlen, Datumsangaben, Symbole und Abkürzungen.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/">Flesch-Reading-Ease für Deutsch: Die Amstad-Formel</a><br><span style="color:#5c6b7a">Erfahren Sie wie die Flesch-Oberflächenlesebarkeitsformel in der deutschen Sprache angepasst wird und welche Auswirkungen diese Anpassung auf die Lesbarkeit hat.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/">Deutsche Abkürzungen ausschreiben - Klartextregeln</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Sie deutsche Abkürzungen in ihren vollen Ausdrücken übersetzen und wie dies für maschinelle Verarbeitung relevant ist.</span></li>
-<li><a href="https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/">Umlaute &amp; ß in der Textverarbeitung: korrekte Behandlung</a><br><span style="color:#5c6b7a">Erfahren Sie, wie Umlaute und das Eszett (ß) in deutschen Texten korrekt behandelt werden, inklusive Transliteration und den richtigen Einsatz von Formaten.</span></li>
-</ul>
-<p class="fine">Automatisch gepflegte Seite eines Software-Experiments (FounderOS). Stand: 2026-07-27.</p>
+<p><a class="home" href="https://labs.handwerkstudio.de/">&larr; Übersicht</a></p>
+<h1>Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen</h1>
+<p class="intro">Für die Effektivität von natürlicher Sprachverarbeitung (NLP) ist es entscheidend, dass der zu bearbeitende Text sauber und frei von nicht sichtbaren Zeichen wie Zero-Width-Zeichen sowie korrekt formatierten Whitespace beinhaltet.</p>
+<h2>Whitespace in deutschem Text</h2>
+<p>In der deutschen Sprache verwendet man im Gegensatz zum Englischen häufiger das sogenannte Schrägstrichblank (\u00A0) statt des normalen Leerzeichens. Dieses spezielle Whitespace-Zeichen ist wichtig für die korrekte Anordnung von Satzzeichen und kann in NLP-Prozessen zu Problemen führen, wenn es nicht korrekt erkannt wird. Beispiel: „Er ging nach Hause.&quot; hat einen Schrägstrichblank vor dem Doppelpunkt, der für eine ordnungsgemäße Analyse erforderlich ist.</p>
+<p>Eine häufige Herausforderung bei NLP-Projekten mit deutschen Texten besteht darin, unterschiedliche Whitespace-Formate einheitlich zu standardisieren. Dabei muss berücksichtigt werden, dass bestimmte Formate für die Lesbarkeit und den Kontext des Textes notwendig sind.</p>
+<h2>Entfernung von Zero-Width-Zeichen</h2>
+<p>Zero-Width-Zeichen (ZWSP) sind unsichtbare Zeichen, die oft durch Kopier- und Einfügemanöver in Texten entstehen. In deutschen Dokumenten können sie als Störung für NLP-Arbeiten auftreten, da sie die Struktur des Textes unerwartet verändern könnten.</p>
+<p>Zum Beispiel kann ein ZWSP zwischen den Buchstaben eines Wortes das Wort in der Analyse nicht korrekt erkannt werden lassen. Ein einfacher Ansatz zur Identifizierung und Entfernung von ZWSPs wäre, die Zeichenkodierung des Textes zu überprüfen und diese spezifischen Codesysteme auszuwählen.</p>
+<h2>Typografische Anführungszeichen</h2>
+<p>Deutsche Texte nutzen oft typografische Anführungszeichen („Gänsefüßchen&quot;) anstelle von einfachen ASCII-Zeichen. Diese Zeichen haben eine geringfügig andere Bedeutung in der NLP, da sie oft als spezielles Format interpretiert werden.</p>
+<p>Um diesen Text korrekt zu verarbeiten, sollten Anführungszeichen vor dem Eintritt ins NLP-Modell geprüft und falls notwendig standardisiert werden. Dies kann durch Ersetzen typografischer Anführungszeichen mit ihren ASCII-Gegenstücken erreicht werden.</p>
+<h2>Automatisierte Lösungen</h2>
+<p>Zu automatisierten Methoden gehört die Nutzung von regulären Ausdrücken zur Identifizierung und Entfernung spezieller Whitespace- und ZWSP-Zeichen. Für Anführungszeichen können Bibliotheken wie `re` in Python oder ähnliche Tools verwendet werden, um diese Struktur korrekt zu behandeln.</p>
+<p>Es ist jedoch wichtig, dass jede automatisierte Lösung auf die spezifischen Bedürfnisse des Textes zugeschnitten ist und möglicherweise manuelle Überprüfungen vorsehen, um sicherzustellen, dass kein wichtiger Inhalt verloren geht.</p>
+<h2>Best Practices</h2>
+<p>Eine gute Praxis besteht darin, eine Kombination aus automatisierten Tools und manueller Überprüfung durch Fachexperten zu verwenden. Dabei ist es sinnvoll, Standardisierungsskripte zu erstellen, die sich auf den spezifischen Text beziehen, um sicherzustellen, dass er für NLP-Prozesse optimiert wird.</p>
+<p>Es lohnt sich auch, regelmäßige Updates und Wartung der Skripte durchzuführen, da neue Herausforderungen entstehen können. Dies hilft dabei, die Qualität der NLP-Analyse zu verbessern.</p>
+<div class="cta"><strong>Passendes kostenloses Werkzeug:</strong>
+<a href="https://labs.handwerkstudio.de/werkzeug/text-normalisieren/">Text normalisieren</a>, direkt im Browser, ohne Anmeldung und ohne Upload.
+<div class="sub" style="margin-top:8px">Deutschen Text normalisieren — ein API-Call, kein Setup. entsteht gerade als API für n8n, Make und eigenen Code.
+<a href="https://incomparable-tartufo-76be9d.netlify.app/" rel="nofollow">Auf die Warteliste</a> (Eintrag ist Interesse, kein Kauf).</div></div>
+
+<p class="fine">Zuletzt aktualisiert: 2026-07-27. Automatisch erstellte, redaktionell ungeprüfte
+Info-Seite eines Software-Experiments; Angaben ohne Gewähr.</p>
 </div></body></html>

@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Deutsche Zahlen und Datumsformate normalisieren](https://labs.handwerkstudio.de/t/deutsche-zahlen-datum-normalisieren/)
 - [Encoding-Fehler im Deutschen: UTF-8 vs Latin-1](https://labs.handwerkstudio.de/t/encoding-fehler-deutsch/)
 - [Deutsche Wörter sortieren nach DIN 5007 - Variante 1 vs. 2](https://labs.handwerkstudio.de/t/deutsche-worter-sortieren-din-5007-varianten/)
 - [Text für Screenreader und TTS vorbereiten](https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/)
