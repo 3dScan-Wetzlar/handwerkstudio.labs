@@ -77,6 +77,29 @@ li{margin:10px 0;line-height:1.55}
  font-size:var(--fs-0);font-weight:600;letter-spacing:.02em}
 .hero-fine{color:var(--faint);font-size:var(--fs-0);margin-top:var(--sp-2)}
 
+/* R6a: Zielgruppe + Preisanker oberhalb des Falzes (5-Sekunden-Klarheit) */
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin:var(--sp-3) 0 0;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--surface);
+ border:1px solid var(--border);border-radius:999px;padding:6px 13px;font-size:14px;
+ color:var(--muted)}
+.chip.price{border-color:var(--accent-line);color:var(--accent-ink);font-weight:620;
+ font-variant-numeric:tabular-nums}
+
+/* R6a: Nutzen-Block (drei konkrete Punkte, nicht drei Adjektive) */
+.benefits{list-style:none;padding:0;margin:var(--sp-4) 0 0;display:grid;gap:10px}
+.benefits li{display:flex;gap:11px;align-items:flex-start;background:var(--surface);
+ border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin:0;
+ font-size:15.5px;line-height:1.5}
+.benefits li::before{content:"";width:18px;height:18px;flex:0 0 auto;margin-top:2px;
+ border-radius:50%;background:var(--accent-soft);
+ background-image:radial-gradient(var(--accent) 38%,transparent 42%)}
+
+/* R6a: sofort nutzbarer Beweis (kostenloses Werkzeug) statt reiner Versprechen */
+.proof{background:var(--surface);border:1px solid var(--accent-line);
+ border-left:4px solid var(--accent);border-radius:var(--radius);
+ padding:var(--sp-3) var(--sp-4);margin-top:var(--sp-4)}
+.proof strong{display:block;margin-bottom:4px}
+
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
  background:var(--accent);color:#fff;border:0;border-radius:10px;padding:13px 26px;

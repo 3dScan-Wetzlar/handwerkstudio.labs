@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Satzgrenzen im Deutschen erkennen](https://labs.handwerkstudio.de/t/satzgrenzen-im-deutsch/)
 - [Deutsche Komposita & Worttrennung: Optimieren lange Wörter](https://labs.handwerkstudio.de/t/deutsche-komposita-worttrennung-optimieren/)
 - [Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen](https://labs.handwerkstudio.de/t/text-bereinigen-nlp/)
 - [Deutsche Zahlen und Datumsformate normalisieren](https://labs.handwerkstudio.de/t/deutsche-zahlen-datum-normalisieren/)
