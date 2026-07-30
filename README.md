@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Anrede in Serienbriefen: Herr/Frau oder neutrale Formulierung](https://labs.handwerkstudio.de/t/anrede-in-serienbriefen/)
 - [Satzgrenzen im Deutschen erkennen](https://labs.handwerkstudio.de/t/satzgrenzen-im-deutsch/)
 - [Deutsche Komposita & Worttrennung: Optimieren lange Wörter](https://labs.handwerkstudio.de/t/deutsche-komposita-worttrennung-optimieren/)
 - [Text vor NLP bereinigen: Whitespace und Zero-Width-Zeichen](https://labs.handwerkstudio.de/t/text-bereinigen-nlp/)
@@ -24,7 +25,6 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 - [Text für Screenreader und TTS vorbereiten](https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/)
 - [Flesch-Reading-Ease für Deutsch: Die Amstad-Formel](https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/)
 - [Deutsche Abkürzungen ausschreiben - Klartextregeln](https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/)
-- [Umlaute & ß in der Textverarbeitung: korrekte Behandlung](https://labs.handwerkstudio.de/t/umlaut-und-eszett-behandlung/)
 
 [RSS-Feed](https://labs.handwerkstudio.de/feed.xml)
 
