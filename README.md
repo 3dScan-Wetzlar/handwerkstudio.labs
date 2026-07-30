@@ -15,6 +15,7 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 
 ## Notizen
 
+- [Deutsche Adressen prüfen: PLZ und Postfach](https://labs.handwerkstudio.de/t/deutsche-adressen-prufen-plz-postfach/)
 - [Anrede in Serienbriefen: Herr/Frau oder neutrale Formulierung](https://labs.handwerkstudio.de/t/anrede-in-serienbriefen/)
 - [Satzgrenzen im Deutschen erkennen](https://labs.handwerkstudio.de/t/satzgrenzen-im-deutsch/)
 - [Deutsche Komposita & Worttrennung: Optimieren lange Wörter](https://labs.handwerkstudio.de/t/deutsche-komposita-worttrennung-optimieren/)
@@ -24,7 +25,6 @@ Nachschlagen: [Verzeichnis deutscher Abkürzungen](https://labs.handwerkstudio.d
 - [Deutsche Wörter sortieren nach DIN 5007 - Variante 1 vs. 2](https://labs.handwerkstudio.de/t/deutsche-worter-sortieren-din-5007-varianten/)
 - [Text für Screenreader und TTS vorbereiten](https://labs.handwerkstudio.de/t/text-fuer-screenreader-und-tts/)
 - [Flesch-Reading-Ease für Deutsch: Die Amstad-Formel](https://labs.handwerkstudio.de/t/flesch-reading-ease-fuer-deutsch-amstad-formel/)
-- [Deutsche Abkürzungen ausschreiben - Klartextregeln](https://labs.handwerkstudio.de/t/deutsche-abkuerzungen-ausschreiben/)
 
 [RSS-Feed](https://labs.handwerkstudio.de/feed.xml)
 
